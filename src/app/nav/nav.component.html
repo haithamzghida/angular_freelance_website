@@ -1,0 +1,219 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><img src="../assets/nav2.gif" alt="" height="70"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav navbar-center">
+      <li class="nav-item active">
+        <a class="nav-link me-5" routerLink="/home">Accueil </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link me-5" href="#">Contact</a>
+      </li>
+
+
+      <li class="nav-item navbar-collapse me-5">
+        <select class="form-select form-select-ls light me-5">
+          
+          <option selected>catégories</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </li>
+
+    </ul>
+
+
+
+    <div class="header-btn navbar-right ">
+      <button type="button" class="btn btn-outline-info me-2">Se connecter</button>
+      <button type="button" class="btn btn-outline-info me-2">S'inscrire</button>
+      <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#exampleModal">Publier un
+        projet</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="categorie de projet" class="form-label">sélectionnez la catégorie pour votre projet</label>
+            <select class="form-select" aria-label="categorie" formControlName="categorie" id="categorie">
+
+                <option [value]="0" [selected] ="true">categorie de projet</option>
+                <option value="1" >Développement Mobile</option>
+                <option value="2">Développement Web</option>
+                <option value="3">Excel</option>
+                <option value="4">PhotoShop</option>
+                <option value="5">Saisie de données</option>
+                <option value="6">Modélisation 3D</option>
+                <option value="7">Traduction</option>
+                <option value="8">Marketing</option>
+              </select>
+            </div>
+          <div class="mb-3">
+            <label for="Titre de projet" class="form-label">Choisissez un nom pour votre projet</label>
+            <input type="text" class="form-control" formControlName="Titre" id="Titre" placeholder="ex. Développer mon site web" >
+          </div>
+          <div class="mb-3">
+            <label for="Salaire" class="form-label">Quel est votre budget estimé ?</label>
+            <input type="text" class="form-control" formControlName="Salaire" id="Salaire" placeholder="ex. $300 USD - $500USD">
+          </div>
+          <div class="mb-3">
+          <label for="Des mots cles" class="form-label">Comment voulez-vous payer ?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" placeholder="ex.Prix par heure"  formControlName="payer" id="payer">
+            <label class="form-check-label" for="flexCheckDefault">
+              Payer par Heure
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" placeholder="ex.Prix fixe"  formControlName="payer" id="payer">
+            <label class="form-check-label" for="flexCheckDefault">
+              Payer un prix fixe
+            </label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="col-sm-1 col-form-label">Date</label>
+          <div class="input-group date" id="datepicker">
+            <input type="date" formControlName="date" id="date" name="trip-start"
+            value="today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()"
+            min=var date = "today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()" max="2023-12-31">
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="duree" class="form-label">Durée de projet</label>
+        <input type="text" class="form-control" formControlName="duree" id="duree" placeholder="ex. 3 mois (extensible) ">
+      </div>
+          <div class="mb-3">
+            <label for="Des mots cles" class="form-label">Quelles compétences sont nécessaires ?</label>
+            <p>Saisissez jusqu'à 5 compétences qui décrivent au mieux projet concours.
+            </p>
+            <textarea class="form-control" formControlName="mots" id="mots"placeholder="EXP .Angular , .PHP , .SQL-Server"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Dites-nous en plus concernant votre projet</label>
+            <textarea class="form-control" formControlName="Description" id="Description" placeholder="Décriver votre projet ici ..."></textarea>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postFreelanceDetails()" class="btn btn-primary">Ajoutter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Modal Edit -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="categorie de projet" class="form-label">sélectionnez la catégorie pour votre projet</label>
+            <select class="form-select" aria-label="categorie" formControlName="categorie" id="categorie">
+             <!-- <option [value]="10" [selected] ="true">10</option>-->
+
+                <option value="1">Développement Mobile</option>
+                <option value="2">Développement Web</option>
+                <option value="3">Excel</option>
+                <option value="4">PhotoShop</option>
+                <option value="5">Saisie de données</option>
+                <option value="6">Modélisation 3D</option>
+                <option value="7">Traduction</option>
+                <option value="8">Marketing</option>
+              </select>
+            </div>
+          <div class="mb-3">
+            <label for="Titre de projet" class="form-label">Choisissez un nom pour votre projet</label>
+            <input type="text" class="form-control" formControlName="Titre" id="Titre" value="ex. Développer mon site web" >
+          </div>
+          <div class="mb-3">
+            <label for="Salaire" class="form-label">Quel est votre budget estimé ?</label>
+            <input type="text" class="form-control" formControlName="Salaire" id="Salaire">
+          </div>
+          <div class="mb-3">
+          <label for="Des mots cles" class="form-label">Comment voulez-vous payer ?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Prix par heure"  formControlName="payer" id="payer">
+            <label class="form-check-label" for="flexCheckDefault">
+              Payer par Heure
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Prix fixe"  formControlName="payer" id="payer">
+            <label class="form-check-label" for="flexCheckDefault">
+              Payer un prix fixe
+            </label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="col-sm-1 col-form-label">Date</label>
+          <div class="input-group date" id="datepicker">
+            <input type="date" formControlName="date" id="date" name="trip-start"
+            value="today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()"
+            min=var date = "today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()" max="2023-12-31">
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="duree" class="form-label">Durée de projet</label>
+        <input type="text" class="form-control" formControlName="duree" id="duree" placeholder="ex. 3 mois (extensible) ">
+      </div>
+          <div class="mb-3">
+            <label for="Des mots cles" class="form-label">Quelles compétences sont nécessaires ?</label>
+            <p>Saisissez jusqu'à 5 compétences qui décrivent au mieux projet concours. Les freelances qui utilisent ces
+              compétences pour trouver les projet qui les intéressent le plus et pour lesquels ils ont de l'expérience.
+            </p>
+            <textarea class="form-control" formControlName="mots" id="mots">EXP .Angular , .PHP , .SQL-Server</textarea>
+          </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Dites-nous en plus concernant votre projet</label>
+            <textarea class="form-control" formControlName="Description" id="Description" placeholder="Décriver votre projet ici ..."></textarea>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postFreelanceDetails()" class="btn btn-primary">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+<router-outlet></router-outlet>

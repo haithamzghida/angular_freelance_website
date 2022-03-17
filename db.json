@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 9,
+      "categorie": "",
+      "Titre": "fio",
+      "Salaire": "",
+      "payer": "",
+      "date": "",
+      "duree": "",
+      "mots": "",
+      "Description": ""
+    },
+    {
+      "id": 10,
+      "categorie": "3",
+      "Titre": "Projet Excel",
+      "Salaire": "$300 - $400 USD",
+      "payer": "",
+      "date": "2022-01-04",
+      "duree": "3 mois ",
+      "mots": ".Excel .SQl-server",
+      "Description": "Projet Excel "
+    },
+    {
+      "id": 11,
+      "categorie": "1",
+      "Titre": "Application Android ",
+      "Salaire": "$500 - $700 USD",
+      "mots": ".Android ; .Mysql ; .Mobile",
+      "Description": "Projet Android"
+    },
+    {
+      "id": 12,
+      "categorie": "",
+      "Titre": " web Angular",
+      "Salaire": "$300 - $500 USD",
+      "mots": ".Angular ; .Asp.net ; .Sql-Server",
+      "Description": "Projet Angular"
+    },
+    {
+      "id": 13,
+      "categorie": "2",
+      "Titre": "Site web Angular",
+      "Salaire": "$500 - $600 USD",
+      "payer": false,
+      "date": "2022-01-05",
+      "duree": "3 mois",
+      "mots": ".Angular ; .Asp.net ; .Sql-server",
+      "Description": "Projet angular "
+    },
+    {
+      "id": 14,
+      "categorie": "2",
+      "Titre": "test",
+      "Salaire": "",
+      "payer": "",
+      "date": "",
+      "duree": "",
+      "mots": "",
+      "Description": ""
+    },
+    {
+      "id": 15,
+      "categorie": "3",
+      "Titre": "cree des fonction vba",
+      "Salaire": "$500 - $700 USD",
+      "payer": true,
+      "date": "2022-01-05",
+      "duree": "15 jours",
+      "mots": ".Excel , .VBA",
+      "Description": "EXcel"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

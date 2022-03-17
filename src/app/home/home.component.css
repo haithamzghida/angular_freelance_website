@@ -1,0 +1,117 @@
+.single-slider{
+    background-image: url("src/assets/h-1.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-position-y: 38%;
+    height: 700px;
+   
+}
+
+.text-underline-hover {
+    text-decoration: none;
+}
+
+.fit-picture {
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+.row-div{
+    margin-top: 5%;
+}    
+
+.services-cap{
+    
+    margin-bottom: 20%;
+    margin-top: 30%;
+    
+}    
+
+.single-services{
+  
+    margin-bottom: 20%;
+    margin-top: 10%;
+    filter: grayscale(1); 
+    transition: .6s; 
+    transition: transform .2s;
+}
+
+.single-services:hover {
+  
+    filter: grayscale(0); 
+    transition: .0s;  
+    background-color: rgb(239, 246, 247);
+    transform: scale(1.1);
+    
+}
+
+.fit-picture-help{
+    width: auto;
+    margin-top: 0%;
+   
+}
+.single-services-help:hover .fit-picture-help{
+    
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+}
+.single-services-help:hover .fit-picture-help-2{
+    -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+}
+
+
+.text-help{
+    margin-top: 20px;
+   margin-bottom: 10%;
+  
+}
+
+.fit-picture-help-2{
+    width: auto;
+    margin-top: 0%;
+    margin-left: 40px;
+}
+
+
+.single-services-help{
+    width: 280px;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-left: 0%;
+}
+
+.text-help-2{
+    margin-top: 20px;
+   margin-bottom: 22%;
+}
+
+.section-tittle-help{
+    margin-bottom: 90px;
+}
+
+.online-cv{
+    background-image: url("src/assets/cv.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-position-y: 40%;
+    height: 600px;
+}
+
+
+.blur { filter: blur(3px); }
+
+.sepia { filter: sepia(100%); }
+
+.cv-caption{
+    margin-top: 40%;
+}
+

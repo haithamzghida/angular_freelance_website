@@ -1,0 +1,21 @@
+
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+ .header-btn {
+    position: absolute;
+    left: 70%;
+    transform: translatex(-30%);
+ }
+
+ .navbar-brand{
+     margin-left: 10%;
+ }
+
+ .form-select {
+  border: 0;
+  box-shadow: none;
+  
+}
